@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-part-content">
+            <div class="header">
+                <div class="search">
+                    <h2 id="search-title">Search Items</h2>
+                    <input type="text" class="search-bar" id="search-input">
+                </div>
+                <div class="filter">
+                    <h2 id="filter-title">Filter</h2>
+                    <div class="filters-select">
+                        <select name="price-filter" id="price-filter">
+                            <option value="All Prices">All Prices</option>
+                            <option value="0-999">0 - 999 EGP</option>
+                            <option value="1000-5000">1000 - 5000 EGP</option>
+                            <option value="5000+">5000+ EGP</option>
+                        </select>
+                        <select name="category-filter" id="category-filter">
+                            <option value="All Categories">All Categories</option>
+                            <option value="TWS">TWS</option>
+                            <option value="Cameras">Cameras</option>
+                            <option value="TVs">TVs</option>
+                            <option value="Chargers">Chargers</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <div class="items">
+                    <div class="item" data-category="TWS" data-name="Earbuds" data-price="500">
+                        <img src="/airpods.jpg" alt="earbuds wireless speaker">
+                        <h4>Earbuds</h4>
+                        <h5>500 EGP</h5>
+                        <button class="add-to-cart-btn" data-name="Earbuds" data-price="500" >Add To Cart</button>
+                    </div>
+                    <div class="item" data-category="Cameras" data-name="Camera" data-price="1000">
+                        <img src="/camera.jpg" alt="wireless security camera">
+                        <h4>Camera</h4>
+                        <h5>1000 EGP</h5>
+                        <button class="add-to-cart-btn" data-name="Camera" data-price="1000" >Add To Cart</button>
+
+                    </div>
+                    <div class="item" data-category="Chargers" data-name="Mobile Charger" data-price="1500">
+                        <img src="/charger.jpg" alt="mobile charger">
+                        <h4>Mobile Charger</h4>
+                        <h5>1500 EGP</h5>
+                        <button class="add-to-cart-btn" data-name="Mobile Charger" data-price="1500" >Add To Cart</button>
+
+                    </div>
+                    <div class="item" data-category="TVs" data-name="Samsung TV" data-price="20000">
+                        <img src="/tv.jpg" alt="smart tv" >
+                        <h4>Samsung TV</h4>
+                        <h5>20000 EGP</h5>
+                        <button class="add-to-cart-btn" data-name="Samsung TV" data-price="20000" >Add To Cart</button>
+
+                    </div>
+                    <div class="item" data-category="TVs" data-name="LG TV" data-price="25000">
+                        <img src="/tv.jpg" alt="smart tv">
+                        <h4>LG TV</h4>
+                        <h5>25000 EGP</h5>
+                        <button class="add-to-cart-btn" data-name="LG TV" data-price="25000" >Add To Cart</button>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="cart">
+            <h1 style="text-align: center;">Shopping Cart</h1>
+            <p id="empty-cart">Your cart is empty</p>
+            <ul class="cart-items">
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>
